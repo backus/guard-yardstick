@@ -4,6 +4,9 @@ require 'yardstick'
 module Guard
   # A guard plugin to run yardstick on every save
   class Yardstick < Plugin
+    autoload :Formatter, 'guard/yardstick/formatter'
+    autoload :MeasurementFormatter, 'guard/yardstick/measurement_formatter'
+
     # A hash of options for configuring the plugin
     #
     # @api private
@@ -80,7 +83,7 @@ module Guard
     def inspect_with_yardstick(paths)
       config = ::Yardstick::Config.coerce(path: paths)
       measurements = ::Yardstick.measure(config)
-      measurements.puts
+      Formatter.new(measurements).puts
     rescue => error
       UI.error 'The following exception occurred while running ' \
                "guard-yardstick: #{error.backtrace.first} " \

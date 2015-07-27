@@ -1,0 +1,16 @@
+---
+The @return tag should be specified: "\e[1;36;49m@return\e[0m tag is required"
+The method summary should be specified: "\e[1;35;49mmethod summary\e[0m is required"
+The method summary should be less than 80 characters in length: "\e[1;35;49mmethod summary\e[0m should be \e[4;33;49m≤80 chars\e[0m"
+The method summary should not end in a period: "\e[1;35;49mmethod summary\e[0m
+  should not \e[4;33;49mend in a period\e[0m"
+The method summary should be a single line: "The \e[0;33;49mmethod summary\e[0m should
+  be a \e[4;33;49msingle line\e[0m"
+The @api tag should be specified: "\e[1;31;49m@api\e[0m tag is required"
+The @api tag must be either public, semipublic or private: "\e[1;31;49m@api\e[0m
+  tag should be \e[4;33;49mpublic\e[0m, \e[4;33;49msemipublic\e[0m or \e[4;33;49mprivate\e[0m"
+A method with protected visibility must have an @api tag of semipublic or private: "A
+  method with protected visibility must have an \e[1;31;49m@api\e[0m tag of \e[4;33;49msemipublic\e[0m
+  or \e[4;33;49mprivate\e[0m"
+A method with private visibility must have an @api tag of private: "\e[1;31;49m@api\e[0m tag for private methods should be \e[4;33;49mprivate\e[0m"
+The public/semipublic method should have an example specified: "\e[1;34;49m@example\e[0m tag is required for \e[4;33;49mpublic\e[0m or \e[4;33;49msemipublic\e[0m methods"
